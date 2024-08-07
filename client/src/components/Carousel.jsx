@@ -1,9 +1,7 @@
-// src/components/Carousel.jsx
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-const Carousel = ({ items }) => {
+const Carousel = ({ items = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -16,9 +14,24 @@ const Carousel = ({ items }) => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [currentIndex, items.length]);
+
+  if (items.length === 0) {
+    return <div>No items to display</div>;
+  }
+
   return (
-    <div className="h-96 relative w-full mt-10" data-carousel="slide">
-      <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+    <div
+      className="carousel-container relative w-full mt-10"
+      data-carousel="slide"
+    >
+      <div className="relative h-56 rounded-lg md:h-96">
         {items.map((item, index) => (
           <div
             key={index}
