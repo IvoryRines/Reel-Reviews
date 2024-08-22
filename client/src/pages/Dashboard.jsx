@@ -242,7 +242,7 @@ function Movie({ movie, onSelectMovie }) {
         onClick={() => onSelectMovie(movie)}
       >
         <img
-          className="h-12 w-7 mr-2"
+          className="h-15 w-10 mr-2"
           src={movie.Poster}
           alt={`${movie.Title} poster`}
         />

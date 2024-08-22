@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="h-36 bg-red-800 flex justify-between align-bottom"></header>
+    <header className="min-h-36 max-h-36 bg-red-800 flex justify-between align-bottom"></header>
   );
 }
 

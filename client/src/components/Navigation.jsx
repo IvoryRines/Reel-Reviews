@@ -23,7 +23,7 @@ const Navigation = () => {
         >
           <img src="/reel.svg" className="h-8" alt="Reel Reviews Logo" />
           <span className="text-white self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Reel Reviews
+            Reel Ratings
           </span>
         </Link>
         <button

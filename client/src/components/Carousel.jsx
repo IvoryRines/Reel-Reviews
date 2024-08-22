@@ -42,7 +42,7 @@ const Carousel = ({ items = [] }) => {
           >
             <img
               src={item.image}
-              className="mx-auto w-half h-full object-cover"
+              className="mx-auto w-half h-full object-cover rounded-lg"
               alt={item.title}
             />
           </div>

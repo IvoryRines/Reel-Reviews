@@ -79,7 +79,7 @@ const RatedList = () => {
 
   return (
     <div>
-      <h1 className="flex justify-center text-4xl">RATED</h1>
+      {/* <h1 className="flex justify-center text-3xl p-2">MY RATED MOVIES</h1> */}
       <div className="w-half rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
         <div className="flex justify-center min-h-screen p-4">
           {userData.ratedMovies?.length > 0 ? (

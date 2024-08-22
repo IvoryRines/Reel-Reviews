@@ -44,7 +44,7 @@ const FavoritesList = () => {
 
   return (
     <div>
-      <h1 className="flex justify-center text-4xl">FAVORITES</h1>
+      {/* <h1 className="flex justify-center text-3xl p-2"> MY FAVORITE MOVIES</h1> */}
       <div className="flex justify-center min-h-screen p-4">
         {userData.favoriteMovies?.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl">
